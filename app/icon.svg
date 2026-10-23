@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Mt Fuji at dawn with a sakura blossom -->
+  <rect width="64" height="64" rx="14" fill="#fde4ea"/>
+  <circle cx="40" cy="22" r="9" fill="#ffb8a3"/>
+  <path d="M4 58 C14 54 20 46 26 36 C28 32 30 29 31 27 L35 28 L38 27 C40 31 42 34 44 37 C49 46 54 54 60 58 Z" fill="#45507a"/>
+  <path d="M31 27 L35 28 L38 27 C39.5 30 41 32 42 34 L39.5 35 L37 33 L35 36 L33 33 L30.5 35 L28 33.5 C29 31 30 29 31 27 Z" fill="#fff"/>
+  <g transform="translate(15 16)" fill="#f28bb0">
+    <ellipse rx="3.2" ry="5" transform="rotate(0) translate(0 -4)"/>
+    <ellipse rx="3.2" ry="5" transform="rotate(72) translate(0 -4)"/>
+    <ellipse rx="3.2" ry="5" transform="rotate(144) translate(0 -4)"/>
+    <ellipse rx="3.2" ry="5" transform="rotate(216) translate(0 -4)"/>
+    <ellipse rx="3.2" ry="5" transform="rotate(288) translate(0 -4)"/>
+    <circle r="2" fill="#d94a38"/>
+  </g>
+</svg>
