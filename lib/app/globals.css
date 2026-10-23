@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light = dawn over Mt Fuji. Dark = a moonlit night with glowing blossoms. */
+:root {
+  --sky: #fdf3f1;
+  --sky-2: #f9dde3;
+  --paper: #fffaf7;
+  --ink: #2b2d42;
+  --mist: #6c6f86;
+  --line: rgb(43 45 66 / 0.12);
+  --sakura: #f28bb0;
+  --sakura-deep: #d9547f;
+  --sakura-pale: #ffe6ee;
+  --fuji: #45507a;
+  --fuji-far: #9aa3c8;
+  --snow: #ffffff;
+  --hills: #c8d3ea;
+  --vermilion: #d94a38;
+  --orb: #ffb8a3;
+  --wood: #f1e2c8;
+  --wood-ink: #6b4a2b;
+  color-scheme: light;
+}
+
+.dark {
+  --sky: #0f1226;
+  --sky-2: #1d2246;
+  --paper: #161a35;
+  --ink: #f3eef0;
+  --mist: #a3a7c4;
+  --line: rgb(243 238 240 / 0.12);
+  --sakura: #ff9fc2;
+  --sakura-deep: #ff7aa8;
+  --sakura-pale: #3a2343;
+  --fuji: #262d5c;
+  --fuji-far: #353e75;
+  --snow: #dfe5ff;
+  --hills: #1b2148;
+  --vermilion: #ff6b57;
+  --orb: #fff1cf;
+  --wood: #3b3029;
+  --wood-ink: #f1dcc0;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-sky: var(--sky);
+  --color-sky-2: var(--sky-2);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-mist: var(--mist);
+  --color-line: var(--line);
+  --color-sakura: var(--sakura);
+  --color-sakura-deep: var(--sakura-deep);
+  --color-sakura-pale: var(--sakura-pale);
+  --color-fuji: var(--fuji);
+  --color-fuji-far: var(--fuji-far);
+  --color-snow: var(--snow);
+  --color-hills: var(--hills);
+  --color-vermilion: var(--vermilion);
+  --color-orb: var(--orb);
+  --color-wood: var(--wood);
+  --color-wood-ink: var(--wood-ink);
+  --font-sans: var(--font-zen);
+  --font-serif: var(--font-mincho);
+
+  --animate-spin-slow: spin 12s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  /* Decorations that poke past the edge must never widen the page on phones */
+  overflow-x: clip;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: clip;
+  transition:
+    background-color 0.6s,
+    color 0.6s;
+}
+
+/* Washi paper: soft fibres over the card colour */
+.washi {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle at 20% 30%, rgb(242 139 176 / 0.06), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgb(69 80 122 / 0.05), transparent 45%);
+  border: 1px solid var(--line);
+}
+
+::selection {
+  background: var(--sakura);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
